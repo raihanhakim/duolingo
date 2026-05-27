@@ -1,5 +1,4 @@
 name: Do a Duolingo lesson
-
 on:
   workflow_dispatch:
     inputs:
@@ -8,7 +7,6 @@ on:
         description: 'Number of lessons to be completed'
         required: false
         type: number
-
 jobs:
   study:
     runs-on: ubuntu-slim
@@ -17,5 +15,5 @@ jobs:
       - uses: oven-sh/setup-bun@v2
       - run: bun index.js
         env:
-          DUOLINGO_JWT: ${{ secrets.DUOLINGO_JWT }}
+          DUOLINGO_JWT: ${{ secrets.JWT }}
           LESSONS: ${{ inputs.lessons }}
