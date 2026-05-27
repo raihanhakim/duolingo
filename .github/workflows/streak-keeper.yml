@@ -1,7 +1,7 @@
 name: Keep my Duolingo streak
 on:
   schedule:
-    - cron: '0 9,22 * * *'
+    - cron: '0 1,13 * * *'
 jobs:
   study:
     runs-on: ubuntu-slim
